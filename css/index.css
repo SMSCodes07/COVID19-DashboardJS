@@ -1,0 +1,15 @@
+@font-face{
+    font-family: 'Product Sans';
+    src: url('../src/fonts/ProductSans-Regular.ttf');
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Prodcut Sans', sans-serif;
+}
+#mapContainer{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+}
