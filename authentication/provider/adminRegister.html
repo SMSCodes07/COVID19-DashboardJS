@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>COVID19-Dashboard</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Samir Méndez & Josh">
+        <meta name="description" content="COVID19-Dashboard">
+        <meta name="keywords" content="Virus, Informacion, Cura, Patogenos, Pandemia, Cuarentena, Noticias, Seguimientos, Salud, Vacuna, Prueba, Guia, Casa, Prevencion, Enfermedad, COVID-19, Coronavirus">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+        <link rel="stylesheet" href="../../css/index.css">
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyAeI46qmQ7NMPRGGSAu1KJ4RGNxyls5EWE",
+            authDomain: "covid19-dashboard-83749.firebaseapp.com",
+            databaseURL: "https://covid19-dashboard-83749.firebaseio.com",
+            projectId: "covid19-dashboard-83749",
+            storageBucket: "covid19-dashboard-83749.appspot.com",
+            messagingSenderId: "1053411475185",
+            appId: "1:1053411475185:web:52547d50e40f6749e8f350",
+            measurementId: "G-X29X1X6MXL"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+        <script src="../../js/adminAuth.js"></script>
+    </head>
+    <body>
+        <!-- Area de navegacion -->
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal redFont">COVID-19 Dashboard</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+            </nav>
+            <a class="btn redBackground text-white" href="./adminLogin.html">Iniciar sesión</a>
+        </div>
+        <!-- Area de navegacion -->
+        <!-- Contenedor de general -->
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-9 col-md-6 col-lg-5 col-xl-4">
+                    <h1 class="redFont mt-5 mb-3">Registro administrativo</h1> 
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Nombre del administrador</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Agregue un nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo electrónico</label>
+                            <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="someone@example.com">
+                            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo con nadie más.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="userPassword" placeholder="••••••••••••••••">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Descripcion del usuario</label>
+                            <textarea class="form-control" id="userDescription" rows="3"></textarea>
+                        </div>
+                    </form>
+                    <button class="btn text-center text-capitalize redBackground text-white btn-lg btn-block" onclick="createAdminUser()">Registrarme</button>
+                </div>
+            </div>
+        </div>
+        <!-- Contenedor de general -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
+    </body>
+</html>
