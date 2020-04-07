@@ -171,7 +171,7 @@ async function getNews() {
           // Creando elementos en el DOM
           // Creando columnas
           var appColumn = createDOMElements("div");
-          appColumn.setAttribute("class", "col-12 col-sm-9 col-md-6 col-lg-5 col-xl-12");
+          appColumn.setAttribute("class", "col-10 col-sm-9 col-md-6 col-lg-5 col-xl-12");
           // Creando columnas
           // Creando tarjetas
           var appCard = createDOMElements("div");
@@ -234,6 +234,7 @@ async function getNews() {
           appCardBody.appendChild(pTag1);
           appCardBody.appendChild(buttonContainer);
           buttonContainer.appendChild(buttonGroup);
+          buttonGroup.appendChild(cardButton1);
           buttonContainer.appendChild(registerDate);
           appColumn.appendChild(appCard);
           listOfCols.appendChild(appColumn)
