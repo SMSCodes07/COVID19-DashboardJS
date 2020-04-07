@@ -3,9 +3,9 @@
     <head>
         <title>COVID19-Dashboard</title>
         <meta charset="UTF-8">
-        <meta name="author" content="Samir Méndez & Josh">
+        <meta name="author" content="Samir Méndez & Yohan Espinal">
         <meta name="description" content="COVID19-Dashboard">
-        <meta name="keywords" content="Virus, Informacion, Cura, Patogenos, Pandemia, Cuarentena, Noticias, Seguimientos, Salud, Vacuna, Prueba, Guia, Casa, Prevencion, Enfermedad, COVID-19, Coronavirus">
+        <meta name="keywords" content="Virus, Information, Cure, Pathogen, Patogeno, Pandemic, Quarentine, News, Seguimientos, Salud, Vacuna, Prueba, Guia, Casa, Prevencion, Enfermedad, COVID-19, Coronavirus">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
@@ -32,7 +32,7 @@
         <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
         <script src="../../js/adminAuth.js"></script>
     </head>
-    <body>
+    <body class="covidrender">
         <!-- Area de navegacion -->
         <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
             <h5 class="my-0 mr-md-auto font-weight-normal redFont">COVID-19 Dashboard</h5>
@@ -43,16 +43,16 @@
         <!-- Contenedor de general -->
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-11 col-sm-9 col-md-6 col-lg-5 col-xl-4">
-                    <h1 class="redFont mt-5 mb-3">Login administrativo</h1> 
+                <div id="login-div" class="col-11 col-sm-9 col-md-6 col-lg-5 col-xl-4">
+                    <h1 class="whiteFont mt-5 mb-3">Login administrativo</h1> 
                     <form>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Correo electrónico</label>
+                            <label class="whiteFont" for="exampleInputEmail1">Correo electrónico</label>
                             <input type="email" class="form-control" id="userEmail" aria-describedby="emailHelp" placeholder="someone@example.com">
                             <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu dirección de correo con nadie más.</small>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1">Contraseña</label>
+                            <label class="whiteFont" for="exampleInputPassword1">Contraseña</label>
                             <input type="password" class="form-control" id="userPassword" placeholder="••••••••••••••••">
                         </div>
                     </form>

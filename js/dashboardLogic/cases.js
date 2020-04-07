@@ -157,7 +157,8 @@ async function createCase() {
     // Creando registro en la base de datos
     // Avisando al administrador
     .then(() => {
-        const telegramMessage = 'Esperamos que todos esten bien, hemos agregado un nuevo caso, y a continuación les dejaremos saber las informaciones de lugar. Ocurrio en ' + patientCity + ', ' + countryName + ', el dia ' + caseDate + '. Por favor les rogamos mantener los niveles de higiene y distanciamiento social.'; 
+        const webpageUrl = 'https://covid19-dashboard-83749.firebaseapp.com/';
+        const telegramMessage = 'Esperamos que todos esten bien, un nuevo caso ha sido registrado dentro del Dashboard. Ocurrio en ' + patientCity + ', ' + countryName + ', el dia ' + caseDate + '. Para detalles sobre este y más casos favor ingresar a nuestro portal:'+"\n\n"+webpageUrl; 
         const telegramAPI = 'https://api.telegram.org/bot930913450:AAE58mHoYiMTP2wskmbzqg5-O2yKRqejVDg/sendMessage?chat_id=-320609397&text=' + telegramMessage;
         // Accediendo al DOM
         var listOfCols = document.getElementById("listOfCols");
