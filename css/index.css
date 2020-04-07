@@ -15,11 +15,7 @@ a{
     height: 100%;
     position: fixed;;
     top: 0;
-    z-index: ;
-}
-.customLevel{
-    position: relative;
-    z-index: 2;
+    z-index: -1\;
 }
 .newsList{
     list-style: none;
