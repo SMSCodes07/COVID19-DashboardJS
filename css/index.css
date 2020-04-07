@@ -17,6 +17,33 @@ a{
     top: 0;
     z-index: -1\;
 }
+#login-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    padding: 40px;
+    margin-top: 35px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+
+}
+.dashboard-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    margin-top: 35px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+
+}
 .newsList{
     list-style: none;
     overflow: hidden;
@@ -36,14 +63,30 @@ a{
     color: #ffffff !important;
 }
 
+
 .covidrender{
-    background-image: url('covid.jpeg') !important;
+    background-image: url('covid-dark.jpg') !important;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-#register-div, #login-div{
+#register-div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    padding: 40px;
+    margin-top: 35px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+
+}
+
+#login-div{
     position: absolute;
     top: 50%;
     left: 50%;
