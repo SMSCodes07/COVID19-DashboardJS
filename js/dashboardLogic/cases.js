@@ -7,6 +7,16 @@ function createDOMElements(itemToCreate) {
     return elementToCreate;
 }
 // Funcion para crear elementos en el DOM
+// Funcion para cerrar la sesion del usuario
+async function logOut() {
+    await firebase.auth().signOut().then(() => {
+        alert('Hasta la próxima');
+        location.href="../authentication/provider/adminLogin.html";
+    }).catch((error) => {
+        alert('Ha ocurrido un error durante el cierre de sesión');
+    });
+}
+// Funcion para cerrar la sesion del usuario
 // Funcion para resguardar la sesion
 function getSession() {
     firebase.auth().onAuthStateChanged((userData) => {
@@ -107,31 +117,42 @@ async function createCase() {
     const patientLastname = document.getElementById('patientLastname').value;
     const patientCity = document.getElementById('patientCity').value;
     const caseDate = document.getElementById('caseDate').value;
+    const patientID = document.getElementById('patientID').value;
+    const bonrDate = document.getElementById('bornDate').value;
     const caseLatitude = document.getElementById('caseLatitude').value;
     const caseLongitude = document.getElementById('caseLongitude').value;
     // Extrayendo datos del formulario
     let casePicture;
+    let bornDate;
+    let userElectoralID;
+    let userCityx;
     // Extrayendo codigo para el caso
     const caseCode = Date.now();
     // Extrayendo codigo para el caso
     if (countryName == 'República Dominicana') {
         casePicture = idDataObject.Foto;
+        bornDate = idDataObject.FechaNacimiento;
+        userElectoralID = idDataObject.Cedula;
+        userCityx = patientCity;
     } else {
         casePicture = '../../src/img/noProfile.png';
+        bornDate = bonrDate;
+        userElectoralID = patientID;
+        userCityx = 'eso'
     }
     // Creando registro en la base de datos
     await firebase.database().ref('covid19Platform/cases/' + caseCode + '/').set({
         caseName: patientName,
         caseLastname: patientLastname,
         caseCountry: countryName,
-        caseCity: patientCity,
+        caseCity: userCityx ,
         caseDate: caseDate,
         caseLatitude: caseLatitude,
         caseLongitude: caseLongitude,
         caseCode: caseCode,
-        casePatieneBornDate: idDataObject.FechaNacimiento,
+        casePatieneBornDate: bornDate,
         caseProfilePicture: casePicture,
-        casePatientID: idDataObject.Cedula,
+        casePatientID: userElectoralID,
     })
     // Creando registro en la base de datos
     // Avisando al administrador
