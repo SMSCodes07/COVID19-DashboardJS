@@ -25,3 +25,9 @@ a{
 .pointerCursor{
     cursor: pointer;
 }
+.cardImage{
+    width: 40%;
+}
+.specialHidden{
+    /* display: none; */
+}
